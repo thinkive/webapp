@@ -1,0 +1,10 @@
+*.bat
+*.DS_Store
+/dev
+*.svn
+/node_modules
+/.idea
+/3rdparty
+/coverage
+/src/css
+>>>>>>> 3.0beta
