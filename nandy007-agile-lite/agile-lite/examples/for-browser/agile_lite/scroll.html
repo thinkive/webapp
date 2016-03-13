@@ -1,0 +1,112 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Agile Lite</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="assets/app/css/app.css">
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="scroll_section" data-role="section" class="active">
+				<header>
+				    <div class="titlebar">
+				    	<a data-toggle="back" href="#"><i class="iconfont iconline-arrow-left"></i></a>
+				    	<h1>滚动组件</h1>
+				    </div>
+				    <div id="tabbarOuter" data-scroll="horizontal">
+				    	<div class="scroller" style="width:500px;">
+						    <div class="tabbar" style="width:100%;">
+						    	<a class="tab active" data-role="tab" href="#">头条</a>
+						    	<a class="tab" data-role="tab" href="#">南京</a>
+						    	<a class="tab" data-role="tab" href="#">江苏</a>
+						    	<a class="tab" data-role="tab" href="#">国内</a>
+						    	<a class="tab" data-role="tab" href="#">国际</a>
+						    	<a class="tab" data-role="tab" href="#">国际</a>
+						    	<a class="tab" data-role="tab" href="#">国际</a>
+						    	<a class="tab" data-role="tab" href="#">国际</a>
+						    </div>
+					    </div>
+				    </div>
+				</header>
+				<article data-role="article" id="main_article" data-scroll="verticle" class="active" style="top:88px;bottom:0px;">
+					<div class="scroller">
+						<ul class="listitem">
+							<li class="sliver">用法</li>
+					        <li>
+					            <div class="text">data-scroll="verticle|horizontal|scroll"</div>
+					        </li>
+					        <li class="sliver">说明</li>
+					        <li>
+					            <div class="text">verticle：纵向滚动条</div>
+					        </li>
+					        <li>
+					            <div class="text">horizontal：横滚动条</div>
+					        </li>
+					        <li>
+					            <div class="text">scroll：纵向、横滚动条</div>
+					        </li>
+					        <li class="sliver">初始化</li>
+					        <li>
+					            <div class="text">articleload的时候默认初始化</div>
+					        </li>
+					        <li>
+					            <div class="text">手动初始化调用var scroll = A.Scroll('#id')</div>
+					        </li>
+					        <li class="sliver">事件</li>
+					        <li>
+					            <div class="text">使用方法：scroll.on('event',function);</div>
+					        </li>
+					        <li>
+					            <div class="text">event支持ISroll的所有事件</div>
+					        </li>
+					        <li>
+					            <div class="text">扩展支持：scrollInit、scrollTop和scrollBottom</div>
+					        </li>
+
+					    </ul>
+					</div>  
+
+				</article>
+			</section>
+		</div>
+		
+		<!--- third --->
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		<!-- agile -->
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		<!--- bridge --->
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script>
+			//当scroll初始化会进入此监听
+			$('#main_article').on('scrollInit', function(){
+				var scroll = A.Scroll(this);//已经初始化后不会重新初始化，但是可以得到滚动对象
+				//监听滚动到顶部事件，可以做一些逻辑操作
+				scroll.on('scrollTop', function(){
+					A.showToast('滚动到顶部');
+					//scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域
+				});
+				//监听滚动到底部事件，可以做一些逻辑操作
+				scroll.on('scrollBottom', function(){
+					A.showToast('滚动到底部');
+					//scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域，
+				});
+			});
+			
+			$('#scroll_section').on('sectionshow', function(){
+				A.Component.scroll('#tabbarOuter');
+			});
+		</script>
+	</body>
+</html>

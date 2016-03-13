@@ -1,0 +1,14 @@
+<!-- ExMobi UIXML(XHTML)文件 -->
+<html isbridge="true">
+	<head>
+		<title show="false">Agile Lite</title>
+		<script>
+		<![CDATA[
+			
+		]]>
+		</script>
+	</head>
+	<body style="padding:0px;margin:0px;">
+		<webview id="browser" url="res:page/www/index.html" backmonitor="true"></webview>
+	</body>
+</html>

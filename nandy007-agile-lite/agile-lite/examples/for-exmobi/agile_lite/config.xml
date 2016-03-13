@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config scope="client" clientversion="4" devicetype="all">
+  <appid>agile_lite</appid>
+  <appname>Agile Lite移动前端框架</appname>
+  <description></description>
+  <version>1.1.2</version>
+  <date>2015-04-14</date>
+  <homepage src="res:page/index.uixml"/>
+  <faultconfig src=""/>
+  <access network="true" gps="true" camera="true" certificate="true" land="false" orientation="port"/>
+  <vendor email="" url=""/>
+  <icon main="res:image/main.png" logo="res:image/logo.png" selectedlogo="res:image/selectedlogo.png"/>
+</config>

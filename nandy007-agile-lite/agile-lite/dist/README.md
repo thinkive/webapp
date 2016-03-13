@@ -1,0 +1,2 @@
+﻿#说明
+agile为Agile Lite框架的核心代码，agile目录下css包含了flat和ratchet两种风格UI

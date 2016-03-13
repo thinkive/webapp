@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<maxml version="2.0" xmlns="http://www.nj.fiberhome.com.cn/map"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.nj.fiberhome.com.cn/map maxml-2.0.xsd">
+  <config>
+    <htmlformat wellformat="true" />
+    <filepreviewconfig wordtohtml="true"/>
+    
+  </config>
+  <route baseaddr="">
+  	<forward pattern="/render" path="render.jsp"/>
+  </route>
+  <services>
+  	<http-service>
+  		<forward pattern="/render" path="render.jsp"/>
+  	</http-service>
+  </services>
+</maxml>

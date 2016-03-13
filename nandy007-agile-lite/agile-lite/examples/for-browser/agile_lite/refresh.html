@@ -1,0 +1,95 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Agile Lite</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="assets/app/css/app.css">
+	</head>
+	<body>
+		<div id="section_container">
+			<section id="refresh_section" data-role="section" class="active">
+				<header>
+				    <div class="titlebar">
+				    	<a data-toggle="back" href="#"><i class="iconfont iconline-arrow-left"></i></a>
+				    	<h1>刷新组件</h1>
+				    </div>
+				</header>
+				<article data-role="article" id="main_article" data-scroll="pull" class="active" style="top:44px;bottom:0px;">
+					<div class="scroller">
+						<ul id="content" class="listitem">
+							<li class="sliver">用法</li>
+					        <li>
+					            <div class="text">data-scroll="pull|pulldown|pullup"</div>
+					        </li>
+					        <li class="sliver">说明</li>
+					        <li>
+					            <div class="text">pull：上下拉均出现</div>
+					        </li>
+					        <li>
+					            <div class="text">pulldown：仅出现下拉</div>
+					        </li>
+					        <li>
+					            <div class="text">pullup：仅出现上拉</div>
+					        </li>
+					        <li class="sliver">初始化</li>
+					        <li>
+					            <div class="text">articleload的时候默认初始化</div>
+					        </li>
+					        <li>
+					            <div class="text">手动初始化调用var refresh = A.Refresh('#id')</div>
+					        </li>
+					        <li class="sliver">事件</li>
+					        <li>
+					            <div class="text">使用方法：refresh.on('event',function);</div>
+					        </li>
+					        <li>
+					            <div class="text">event支持ISroll的所有事件</div>
+					        </li>
+					        <li>
+					            <div class="text">扩展支持：refreshInit、pulldown、pullup、scrollTop和scrollBottom</div>
+					        </li>
+					    </ul>
+					</div>  
+					<a data-role="scrollTop" data-toggle="scrollTop" href="#main_article" style="bottom:4px;right:4px;">
+						<img src="assets/app/img/top.png" style="border: 1px solid #efefef;"></img>
+					</a>
+				</article>
+			</section>
+		</div>
+		
+		<!--- third --->
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		<!-- agile -->
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		<!--- bridge --->
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+		<script>
+			//当refresh初始化会进入此监听
+			$('#main_article').on('refreshInit', function(){
+				var refresh = A.Refresh(this);
+				//监听下拉刷新事件，可以做一些逻辑操作，当data-scroll="pullup"时无效
+				refresh.on('pulldown', function(){
+					$('#content').prepend('<li><div class="text">下拉刷新的内容</div></li>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+				//监听上拉刷新事件，可以做一些逻辑操作，当data-scroll="pulldown"时无效
+				refresh.on('pullup', function(){
+					$('#content').append('<li><div class="text">上拉刷新的内容</div></li>');
+					refresh.refresh();//当scroll区域有dom结构变化需刷新
+				});
+			});
+		</script>
+	</body>
+</html>

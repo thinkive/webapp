@@ -1,0 +1,325 @@
+<!-- HTML5文件 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Agile Lite</title>
+		<link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="assets/agile/css/flat/iconline.css">
+		<style>
+		.photo{
+			border-radius:30px;width:60px;height:60px;overflow:hidden;background:url(assets/app/img/aside/photo.png) center center;background-size:cover;
+			display:inline-block;
+			vertical-align: middle;
+		}
+		#aside_container aside{
+			background: -webkit-linear-gradient(-45deg, #1b63ab 0%,#0e4882 75%);
+		}
+		
+		#section_container_mask{
+			background-color:#000;
+			opacity: .3;
+		}
+		
+		/*侧滑列表-自定义宽度*/
+		#custom_width_aside .menu li:active{
+			background-color:rgba(255,255,255,0.2);
+		}
+		/*侧滑列表-白色列表*/
+		#aside_container aside.aside-white{
+			background: -webkit-linear-gradient(-45deg, #fff 0%,#fff 75%);
+			color:#333;
+			padding:30px 0;
+		}
+		#aside_container aside.aside-white .listitem li{
+			border-bottom:0px;
+			padding-left:40px;
+		}
+		/*侧滑列表-列表样式*/
+		.side-list{
+			padding:10px 20px;
+			border-top:1px solid #1B63AB;
+		}
+		.side-list:last-child{
+			border-bottom:1px solid #1B63AB;
+		}
+		.side-list:active{
+			background-color:rgba(255,255,255,0.2);
+		}
+		.side-list.active{
+			background-color:rgba(255,255,255,0.2);
+		}
+		.side-list.active div{
+			background-color:rgba(255,255,255,0.2);
+		}
+		.side-list a{			
+			color: #fff;
+		}
+		.side-list-btn{
+			font-size:14px;
+			border:1px solid white;
+			width:80%;
+			padding:6px 0;
+			text-align:center;
+			position:relative;
+			left:50%;
+			-webkit-transform:translateX(-50%);
+			margin-bottom:10px;
+		}
+		.side-list-btn:active{
+			background-color:rgba(255,255,255,0.2)
+		}
+		
+		.side-list-round{
+			width:36px;
+			height:36px;
+			border-radius:18px;
+			border:1px solid rgba(255,255,255,0.5);
+			display:inline-block;
+			text-align:center;
+			font-size:20px;
+			color:white;
+			position:relative;
+			vertical-align:middle;
+			margin-right:4px;
+		}
+		.side-list-round img,.side-list-round .iconfont{
+			position:absolute;top:50%;left:50%;display: block;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);width:20px;
+		}
+		.side-list-round + span{
+			margin-left:6px;
+			font-size:14px;
+		}
+		
+		/*侧滑列表-九宫样式*/
+		.grid .grid-cell .grid-img{
+			background-color:transparent;
+			background-size:cover;
+			width:50px;
+			height:50px;
+		}
+		
+		.grid .grid-img-guide{
+			background:url(assets/app/img/aside/guide.png);
+		}
+		.grid .grid-cell:active .grid-img-guide{
+			background:url(assets/app/img/aside/guide_active.png);
+		}
+		
+		.grid .grid-img-trash{
+			background:url(assets/app/img/aside/trash.png);
+		}
+		.grid .grid-cell:active .grid-img-trash{
+			background:url(assets/app/img/aside/trash_active.png);
+		}
+		
+		.grid .grid-img-switch{
+			background:url(assets/app/img/aside/switch_off.png);
+		}
+		.grid .grid-img-switch.on{
+			background:url(assets/app/img/aside/switch_on.png);
+			background-size:cover;
+		}
+		.grid .grid-img-switch.on+.grid-label{
+			color:white;
+		}
+		
+		.grid .grid-img-feedback{
+			background:url(assets/app/img/aside/feedback.png);
+		}
+		.grid .grid-cell:active .grid-img-feedback{
+			background:url(assets/app/img/aside/feedback_active.png);
+		}
+		
+		.grid .grid-img-about{
+			background:url(assets/app/img/aside/about.png);
+		}
+		.grid .grid-cell:active .grid-img-about{
+			background:url(assets/app/img/aside/about_active.png);
+		}
+		
+		.grid .grid-img-weibo{
+			background:url(assets/app/img/aside/weibo.png);
+		}
+		.grid .grid-cell:active .grid-img-weibo{
+			background:url(assets/app/img/aside/weibo_active.png);
+		}
+		
+		.grid .grid-cell{
+			color:rgba(255,255,255,0.3);
+		}
+		.grid .grid-cell:active{
+			color:rgba(255,255,255,1);
+		}
+		.grid .grid-cell:active .grid-img{
+			background-color:transparent;
+			background-size:cover;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="aside_container">
+			<aside id="left_push_aside" data-position="left" data-transition="push">
+			    左侧菜单
+			</aside>
+			<aside id="left_overlay_aside" data-position="left" data-transition="overlay" class="aside-white">
+				<ul class="listitem">
+					<li class="active">
+						<div class="img square" style="background-color:#fa5643;">
+			            	<img src="assets/app/img/aside/newspaper.png" style="width:24px;"/>
+			            </div>
+						<div class="text nowrap" style="height:38px;position:relative;">
+							<span class="middle">新闻</span>
+						</div>
+					</li>
+					<li>
+						<div class="img square" style="background-color:#fa9f43;">
+			            	<i class="iconfont iconline-chat-bubbles"></i>
+			            </div>
+						<div class="text nowrap" style="height:38px;position:relative;">
+							<span class="middle">段子</span>
+						</div>
+					</li>
+					<li>
+						<div class="img square" style="background-color:#3486f8;">
+			            	<i class="iconfont iconline-media-video"></i>
+			            </div>
+						<div class="text nowrap" style="height:38px;position:relative;">
+							<span class="middle">直播</span>
+						</div>
+					</li>
+					<li>
+						<div class="img square" style="background-color:#34b577;">
+			            	<i class="iconfont iconline-favourite"></i>
+			            </div>
+						<div class="text nowrap" style="height:38px;position:relative;">
+							<span class="middle">订阅</span>
+						</div>
+					</li>
+					<li>
+						<div class="img square" style="background-color:#fbc02d;">
+			            	<i class="iconfont iconline-present"></i>
+			            </div>
+						<div class="text nowrap" style="height:38px;position:relative;">
+							<span class="middle">积分商城</span>
+						</div>
+					</li>
+				</ul>
+			</aside>
+			
+			<aside id="right_push_aside" data-position="right" data-transition="push">
+				<ul class="menu">
+			       	<li style="color:white;text-align:center;padding:8px 0;">
+			       		<div class="box box-center">
+			           		<div class="photo"></div>
+			           	</div>
+			            <p style="display:block;color:white;font-size:18px;margin:8px;">张三</p>
+			            <p style="opacity:0.7;margin:8px;">工号：1001</p>
+			        </li>
+			        <li class="side-list"><a href="#" onclick="$native.toast('离线版暂不支持此功能')"><div class="side-list-round"><img src="assets/app/img/aside/notice.png" class="wmz-side-img"/></div><span>公告收藏</span></a></li>
+			        <li class="side-list"><a href="#" onclick="$native.toast('离线版暂不支持此功能')"><div class="side-list-round"><img src="assets/app/img/aside/doc.png" class="wmz-side-img"/></div><span>公文收藏</span></a></li>
+			        <li class="side-list"><a href="#" onclick="$native.toast('离线版暂不支持此功能')"><div class="side-list-round"><img src="assets/app/img/aside/contact.png" class="wmz-side-img"/></div><span>通讯录收藏</span></a></li>
+			    </ul>
+			</aside>
+			<aside id="right_overlay_aside" data-position="right" data-transition="overlay">
+				右侧菜单
+			</aside>
+			<aside id="right_reveal_aside" data-position="right" data-transition="reveal">
+				<div style="margin:0 20px 20px 20px;padding:16px 10px;border-bottom:1px solid rgba(255,255,255,0.1);">
+					<div class="photo"></div>
+					<span>用户登录</span>
+					<div style="width:50px;display:inline-block;vertical-align: middle;float:right;">
+						<img src="assets/app/img/aside/weather.png" style="width:40px;margin-top:8px;"/>
+						<br/>
+						<span style="color:rgba(255,255,255,0.3);font-size:12px;">多云   9℃</span>
+					</div>
+				</div>
+				<div class="grid" data-col="2">
+					<div class="grid-cell">
+						<div class="grid-img grid-img-guide" onclick="$native.toast('离线版暂不支持此功能')"></div>
+						<label class="grid-label">新手引导</label>
+					</div>
+					<div class="grid-cell">
+						<div class="grid-img grid-img-trash" onclick="$native.toast('离线版暂不支持此功能')"></div>
+						<label class="grid-label">清理缓存20M</label>
+					</div>
+					<div class="grid-cell">
+						<div id="menuswitch" class="grid-img grid-img-switch" onclick="switchToggle(this)"></div>
+						<label class="grid-label">推送开关</label>
+					</div>
+					<div class="grid-cell">
+						<div class="grid-img grid-img-feedback" onclick="$native.toast('离线版暂不支持此功能')"></div>
+						<label class="grid-label">意见反馈</label>
+					</div>
+					<div class="grid-cell">
+						<div class="grid-img grid-img-about" onclick="$native.toast('离线版暂不支持此功能')"></div>
+						<label class="grid-label">关于我们</label>
+					</div>
+					<div class="grid-cell">
+						<div class="grid-img grid-img-weibo" onclick="$native.toast('离线版暂不支持此功能')"></div>
+						<label class="grid-label">微博</label>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</aside>
+			<aside id="custom_width_aside" data-position="right" data-transition="push" style="width:80px;">
+				<ul class="menu" style="text-align:center;font-size:2em;">
+			    	<li style="padding: 10px 0;">
+			        	<i class="iconfont iconline-box" style="font-size:20px;"></i>
+			        </li>
+			        <li style="padding: 10px 0;">
+			            <i class="iconfont iconline-box-empty" style="font-size:20px;"></i>
+			        </li>
+			        <li style="padding: 10px 0;">
+			            <i class="iconfont iconline-box-in" style="font-size:20px;"></i>
+			        </li>
+			        <li style="padding: 10px 0;">
+				        <i class="iconfont iconline-box-out" style="font-size:20px;"></i>
+				    </li>
+			    </ul>
+			</aside>
+		</div>
+		<div id="section_container">
+			<section id="aside_section" data-role="section" class="active" data-aside-left="#left_push_aside" data-aside-right="#right_push_aside">
+				<header>
+				    <div class="titlebar">
+				    	<a data-toggle="back" href="#"><i class="iconfont iconline-arrow-left"></i></a>
+				    	<h1>功能列表</h1>
+				    	<a data-toggle="aside" href="#right_push_aside"><i class="iconfont iconline-list"></i></a>
+				    </div>
+				</header>
+				<article data-role="article" id="main_article" data-scroll="verticle" class="active" style="top:44px;bottom:0px;">
+					<div class="scroller padded">
+						<div class="section-title">左侧菜单栏:右滑可以唤起</div>
+		                <a class="button bg-turquoise white" href="#left_push_aside" data-toggle="aside">push</a>
+		                <a class="button bg-peter-river white" href="#left_overlay_aside" data-toggle="aside">overlay</a>
+			            <div class="section-title">右侧菜单栏:左滑可以唤起</div>
+		                <a class="button bg-turquoise" href="#right_push_aside" data-toggle="aside">push</a>
+		                <a class="button bg-peter-river" href="#right_overlay_aside" data-toggle="aside">overlay</a>
+		                <a class="button bg-alizarin" href="#right_reveal_aside" data-toggle="aside">reveal</a>
+		                <a class="button bg-orange" href="#custom_width_aside" data-toggle="aside">自定义宽度</a>
+					</div>
+				</article>
+
+			</section>
+		</div>
+		
+		<!--- third --->
+		<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+		<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+		<script src="assets/third/iscroll/iscroll-probe.js"></script>
+		<script src="assets/third/arttemplate/template-native.js"></script>
+		<!-- agile -->
+		<script type="text/javascript" src="assets/agile/js/agile.js"></script>		
+		<!--- bridge --->
+		<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+		<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="assets/app/js/app.js"></script>
+
+		
+	</body>
+</html>
