@@ -4,4 +4,6 @@
 3. **appframework**        http://www.wecloud.net.cn/appframework-3.0beta/index.html
 4. **taobao SUI**          http://m.sui.taobao.org/demos/
 5. **baidu GMU**           http://www.wecloud.net.cn/GMU-master/examples/index.html
-6. **onsenUI**          http://www.wecloud.net.cn/onsenUI/demo/index.html
+6. **onsenUI**             http://www.wecloud.net.cn/onsenUI/demo/index.html
+7. **Jingle**              http://www.wecloud.net.cn/Jingle/index.html
+
