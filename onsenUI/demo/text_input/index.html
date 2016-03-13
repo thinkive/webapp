@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Text Input Demo</title>  
+  <link rel="stylesheet" href="../styles/app.css"/>
+  <link rel="stylesheet" href="../../build/css/onsenui.css">
+  <link rel="stylesheet" href="../../build/css/onsen-css-components.css">
+
+  <script src="../../build/js/angular/angular.js"></script> 
+  <script src="../../build/js/onsenui.js"></script>    
+  <script src="../app.js"></script>  
+  
+</head>
+
+<body>    
+
+  <ons-navigator>
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">Text Input</div>
+      </ons-toolbar>
+
+      <section style="padding: 8px">
+        <input type="text" class="text-input" ng-model="text" placeholder="Type here" style="display: block; width: 100%"></input>
+        <ons-button modifier="large--cta" style="display: block; width: 100%; margin-top: 8px;">Submit</ons-button>
+      </section>
+    </ons-page>
+  </ons-navigator>
+ 
+</body>
+</html>
