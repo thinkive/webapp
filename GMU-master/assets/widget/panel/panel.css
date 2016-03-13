@@ -1,0 +1,39 @@
+.ui-panel{
+    position: absolute;
+    display: block;
+}
+
+.ui-panel-contentWrap{
+    position: relative;
+    z-index: 1;
+}
+
+.ui-panel.ui-panel-right{
+    right: 0;
+}
+
+.ui-panel.ui-panel-left{
+    left: 0;
+}
+
+.ui-panel.ui-panel-push{
+    z-index: 999;
+}
+.ui-panel.ui-panel-overlay{
+    z-index: 1001;
+}
+.ui-panel.ui-panel-reveal{
+    z-index: 0;
+}
+
+.ui-panel-animate{
+    -webkit-transition: -webkit-transform 350ms ease;
+}
+
+.ui-panel-dismiss{
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    top: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

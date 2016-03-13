@@ -1,0 +1,56 @@
+/** 一级导航样式 */
+.ui-navigator {
+    border-top: 1px solid #2468c9;
+    border-bottom: 1px solid #0145a5;
+    background:#2773dc;
+}
+.ui-navigator-list {
+    width: 100%;
+    display: -webkit-box;
+}
+.ui-navigator-list li {
+    line-height: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+.ui-navigator-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing:border-box;
+    padding: 0 15px;
+}
+.ui-navigator-list li.ui-state-hover,
+.ui-navigator-list li.ui-state-active {
+    background: #0c4da8;
+}
+
+.ui-scroller {
+    padding: 0;
+    margin: 0;
+    display: inline-block;/*重要，靠他让宽度由子节点撑开*/
+}
+.ui-scroller .ui-navigator-list {
+    display: table;
+    table-layout: fixed;/*宽度可控*/
+    white-space:nowrap;/*内容不换行*/
+    width: auto;
+}
+.ui-scroller .ui-navigator-list:after {
+    content: '';
+    clear: both;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.ui-scroller .ui-navigator-list li {
+    display: inline-block;
+    /*float: left;*/
+}

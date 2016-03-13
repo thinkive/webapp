@@ -1,0 +1,45 @@
+
+.ui-progressbar-bg {
+    border-radius: 5px;
+    position: relative;
+    -webkit-user-select:none;
+}
+.ui-progressbar-filled {
+    position: absolute;
+    border-radius: 5px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition-duration: 0ms;
+    -webkit-user-select:none;
+    pointer-events:none;
+}
+.ui-progressbar-button {
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition-duration: 0ms;
+    -webkit-user-select:none;
+}
+
+/* 横向样式 */
+.ui-progressbar-h .ui-progressbar-bg {
+    height: 5px;
+}
+.ui-progressbar-h .ui-progressbar-filled {
+    width:0;
+    height: 100%;
+}
+
+
+/* 竖向样式 */
+
+.ui-progressbar-v .ui-progressbar-bg {
+    height:100%;
+    width: 5px;
+}
+.ui-progressbar-v .ui-progressbar-filled {
+    top: 100%;
+    height:0;
+    width: 100%;
+}
+.ui-progressbar-v .ui-progressbar-button {
+    top: 100%;
+}

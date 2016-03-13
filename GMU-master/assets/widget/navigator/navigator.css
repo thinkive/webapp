@@ -1,0 +1,8 @@
+.ui-navigator-list,
+.ui-navigator-list li {
+    list-style: none;
+}
+.ui-navigator-list li {
+    display: inline-block;
+    white-space:nowrap;/*内容不换行*/
+}

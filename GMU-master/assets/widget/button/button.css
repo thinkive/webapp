@@ -1,0 +1,16 @@
+.ui-btn{
+    cursor:pointer;
+    -webkit-user-select: none;
+    -webkit-box-sizing:border-box;
+    -webkit-appearance:none;
+}
+.ui-btn.ui-state-disable,
+.ui-btn.ui-state-disabled {
+    cursor: default;
+    pointer-events: none;/*此属性能屏蔽click事件*/
+}
+.ui-btn-icon-only .ui-btn-text,
+.ui-btn-icon-notext .ui-btn-text,
+.ui-hidden {
+    display: none;
+}

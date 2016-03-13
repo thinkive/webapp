@@ -1,0 +1,39 @@
+
+.ui-toolbar-wrap {
+    height: 40px;
+    border: #d2d2d2 solid 1px;
+    border-width: 1px 0;
+    background: #f4f4f4;
+}
+
+.ui-toolbar-wrap a {
+    text-decoration: none;
+}
+
+.ui-toolbar-title {
+    text-align: center;
+    line-height: 40px;
+}
+.ui-toolbar-button {
+    display: inline-block;
+    padding: 0.5em 0.6em;
+    margin: 2px;
+    border: 1px solid #D2D2D2;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #FFF;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/*css for pad*/
+@media all and (min-device-width:768px) and (max-device-width: 1024px){
+    .ui-toolbar-wrap {
+        height: 48px;
+    }
+    .ui-toolbar-title {
+        font-size: 16px;
+        line-height: 48px;
+    }
+}
