@@ -8,4 +8,4 @@
 7. **Jingle**              http://www.wecloud.net.cn/Jingle/index.html
 
 #android常用DEMO
-1. **android webview js交互DEMO**  webapp/JSAndroid工程
+1. **android webview js交互DEMO**  JSAndroid工程
