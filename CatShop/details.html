@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CatShop</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/slider.css"/>
+</head>
+<body>
+	<!--头部 -->
+	<header class="top-header fixed-head details-head">
+		
+		<a href="javascript:history.back(-1)"><i class="fa fa-chevron-left"></i></a>
+		<h3>女装，连衣裙</h3>
+		<div class="pull-right">
+			<i class="fa fa-shopping-cart" style="margin-right: 13px;"><em>1</em></i>
+		</div>
+		<!--加入购物车和立即购买-->
+		<div class="details-btn">
+			<a href="checkout.html">立即购买</a>
+			<input type="button" value="加入购物车" />
+		</div>
+		<!--购物车快捷-->
+		<div class="shop-cart">
+			<div class="cart-item">
+				<button type="button"><i class="fa fa-trash-o"></i></button>
+				<ul>
+					<li>
+					<span><img src="img/pic1.png"/></span>
+					</li>
+					<li>
+						<h4>史上最美连衣裙</h4>
+						<p>尺码：L</p>
+						<small>￥39.99</small>
+					</li>
+					<li>
+						<b>1</b>
+						<div class="add">
+							<i class="fa fa-chevron-up"></i>
+							<i class="fa fa-chevron-down"></i>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h3>￥396.99</h3>
+			<input type="button" value="去结算" />
+		</div>
+	</header>
+	<!--弹窗-->
+	<!--<div class="popupbox">
+		<div class="popup">
+			<p>确定删除该商品吗？</p>
+			<button type="button" class="true-btn">确定</button>
+			<button type="button" class="false-btn">取消</button>
+		</div>
+	</div>-->
+	<!--详情-->
+	<div class="container details">
+		<div id="slider-box">
+			<ul id="slider">
+				<li><img src="img/组-3@2x.png"/></li>
+				<li><img src="img/组-3@2x.png"/></li>
+				<li><img src="img/组-3@2x.png"/></li>
+				<li><img src="img/组-3@2x.png"/></li>
+			</ul>
+		</div>
+		<div class="slide-price">
+				<h4>粉色连衣裙</h4>
+				<span>￥666.99</span>
+		</div>
+		<div class="discription">
+			<div class="dis-head">
+				<i>+</i>
+				<p>详细描述</p>
+			</div>
+			<figure>
+				<img src="img/des.jpg"/>
+			</figure>
+		</div>
+		<div class="details-chose">
+			<h3><i class="fa fa-pie-chart"></i>颜色</h3>
+			<small>选择一个颜色</small>
+			<dl>
+				<dd style="background-color: #f0c9ce;">
+					<i class="fa fa-check-circle"></i>
+				</dd>
+				<dd style="background-color: #af687a;">
+					<i class="fa fa-check-circle"></i>
+				</dd>
+				<dd style="background-color: #87a6b2;">
+					<i class="fa fa-check-circle"></i>
+				</dd>
+			</dl>
+			<hr />
+			<h3><i class="fa fa-maxcdn"></i>尺寸</h3>
+			<small>选择你的尺寸</small>
+			<ul>
+				<li>s</li>
+				<li>m</li>
+				<li>l</li>
+				<li>xl</li>
+			</ul>
+		</div>
+		<a href="checkout.html" class="add-cart">加入购物车</a>
+	</div>
+	<script src="libs/zepto/zepto.min.js"></script>
+	<script src="libs/zepto/zepto.touchSlider.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+	$(function(){
+		$('#slider-box').touchSlider();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CatShop</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/slider.css"/>
+</head>
+<body>
+	<!--头部 -->
+	<header class="top-header fixed-head checkout-head">
+		<a href="javascript:history.back(-1)"><i class="fa fa-chevron-left"></i></a>
+		<h3>结算</h3>
+	</header>	
+	<!--详情-->
+	<div class="container checkout">
+		<form action="order.html">
+			<div class="check-group">
+				<select>
+					<option>选择城市</option>
+					<option>合肥</option>
+					<option>北京</option>
+					<option>上海</option>
+					<option>广州</option>
+				</select>
+				<i class="fa fa-angle-down"></i>
+			</div>
+			<div class="check-group">
+				<input type="text" placeholder="姓名"/>
+			</div>
+			<div class="check-group">
+				<select>
+					<option>选择街道</option>
+					<option>创新大道</option>
+					<option>科学大道</option>
+					<option>玉兰大道</option>
+					<option>樱花小道</option>
+				</select>
+				<i class="fa fa-angle-down"></i>
+			</div>
+			<div class="check-group">
+				<textarea placeholder="详细地址"></textarea>
+			</div>
+			<div class="check-group">
+				<input type="tel" placeholder="请输入手机号" maxlength="11" />
+			</div>
+			<input type="submit" value="下一步" />
+		</form>
+	</div>
+	<script src="libs/zepto/zepto.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
