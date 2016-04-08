@@ -15,3 +15,7 @@ http://resume.wecloud.net.cn
 
 #android常用DEMO
 1. **android webview js交互DEMO**  JSAndroid工程
+
+
+#移动端DEMO
+1. **移动服装销售** http://www.wecloud.net.cn/lightApp/CatShop/index.html
